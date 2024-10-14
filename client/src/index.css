@@ -5,6 +5,7 @@
 *{
     margin: 0;
     padding: 0%;    
+    font-family: 'Poppins', sans-serif;
 }
 
 @font-face {
@@ -15,4 +16,67 @@
 
 .cyberia{
     font-family: myFirstFont;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+@keyframes fadeIn2 {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+/*   
+.presented-text {
+    animation: fadeIn 2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    color: #f5f5f5;
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+} */
+/* 
+.presented-text {
+    font-size: 2.5rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    text-shadow: 
+      0 0 5px #0ff, 
+      0 0 10px #0ff, 
+      0 0 15px #0ff;
+  }
+
+   */
+
+   .glass-box {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+  }
+  
+.presented-text {        
+    animation: fadeIn2 2s ease-in-out;            
+    font-family: 'Poppins', sans-serif;
+    color: wheat;
+    text-shadow: 
+      0 0 5px #0ff, 
+      0 0 10px #0ff, 
+      0 0 15px #0ff;
+  }
+
+  .logoImage {
+    animation: fadeIn2 3s ease-in;
+    font-family: 'Poppins', sans-serif;
+    color: #f5f5f5;
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+} 
+
+.gradient{
+  background-image: linear-gradient(-180deg, #78350f, black);
 }

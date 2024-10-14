@@ -4,7 +4,8 @@ import Img from './assets/Cyb.jpg'
 import  './index.css'
 import Navbar from './components/Navbar'
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
-import Hero from './pages/Hero'
+import Home from './pages/Home'
+import LoginForm from './pages/Login'
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
     <BrowserRouter>
     <Navbar/>
     <Routes>
-      <Route path='/' element={<Hero/>} />
+      <Route path='/' element={<Home/>} />
+      <Route path='/login' element={<LoginForm/>} />
     </Routes>
     </BrowserRouter>
     </>
