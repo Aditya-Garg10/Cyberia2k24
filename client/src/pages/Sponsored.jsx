@@ -26,7 +26,7 @@ const Sponsored = () => {
       </div>
       <div className="flex h-auto flex-col items-center gap-10 justify-center p-10  ">
         <div className="flex">
-          <h1 className='text-2xl pb-2 md:text-sm border-b-2 text-white'>Maharaja Sayajirao University of Baroda</h1>
+          <h1 className='text-2xl pb-2 md:text-sm border-b-2 text-white'>The Maharaja Sayajirao University of Baroda</h1>
         </div>
         <div className="flex  flex-row  w-full md:flex-col  justify-center items-center">
             <div className="flex h-[50vh] justify-center items-center w-full">
