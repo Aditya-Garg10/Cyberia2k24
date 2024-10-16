@@ -13,7 +13,7 @@ import { eventContext } from './context/Context'
 import axios from 'axios'
 
 
-export const HOST = "http://localhost:8000"
+export const HOST = "https://cyberia2k24-2.onrender.com"
 
 const App = () => {
 
