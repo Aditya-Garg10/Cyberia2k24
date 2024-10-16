@@ -23,6 +23,7 @@ app.use(
       origin: [
        
         "http://localhost:5173",
+        "https://cyberia2k24.vercel.app"
         
       ],
       methods: ["GET", "POST", "DELETE", "PUT", "PATCH"],
@@ -36,7 +37,7 @@ app.use(
   
   const allowedOrigins = [  
     
-    
+    "https://cyberia2k24.vercel.app",
     "http://localhost:5173",
    
     
