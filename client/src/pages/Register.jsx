@@ -3,24 +3,26 @@ import Logo from '../assets/Logo.png'
 import { Input, Button, Form, Select } from 'antd'
 import Title from 'antd/es/skeleton/Title';
 import { eventContext } from '../context/Context';
+import axios from 'axios'
+import { HOST } from '../App'
 
 import { RxCross1 } from "react-icons/rx";
 
 const Register = () => {
 
-    
-   
-
     const [modalTitle, setmodalTitle] = useState("");
     const [userSelectedEvents, setuserSelectedEvents] = useState([]);
+    const [totalPrice, settotalPrice] = useState(0);
+
+
 
     const { events } = useContext(eventContext);
 
     const options = [];
-    events.map((event,i)=>{
+    events.map((event, i) => {
         options.push({
-            label : event.title,
-            value : event.title
+            label: event.title,
+            value: event.title,
         })
     })
     const [Data, setData] = useState({
@@ -30,30 +32,91 @@ const Register = () => {
         contactNo2: "",
         institute: "",
         level: "",
-        
+
     });
 
     const changeHandler = (e) => {
         setData({ ...Data, [e.target.name]: e.target.value })
     }
 
-    
-const handleChange = (e) => {
-  setuserSelectedEvents(e)
-  console.log({...userSelectedEvents})
-};
 
 
+    const calculateTotalPrice = () => {
+        // console.log(userSelectedEvents)
+        const selectedEvents = events.filter((event) =>
+            userSelectedEvents.includes(event.title)
+        );
+        console.log("selected events", selectedEvents.title);
+        const total = selectedEvents.reduce((sum, event) => sum + event.price, 0);
+        console.log("total Price", total);
+        settotalPrice(total)
+    }
+
+    const handleChange = (e) => {
+        setuserSelectedEvents(e)
+        //  setuserSelectedEvents((prev)=>{
+        //     if(prev.includes(e)){
+        //         return prev.filter((n)=> n !== e);
+        //     }
+        //     else{
+        //         return [...prev,e]
+        //     }
+        //  })
+
+    }
+
+
+
+
+
+
+    // const totalPrice =userSelectedEvents.reduce((total,product)=>total + product.price,0)
 
     const handleSubmit = async () => {
         console.log({ ...Data, modalTitle });
         setModalOpen(false)
+
     }
 
-    const handleEventOnClick = (e) => {
-        e.disabled
-        setuserSelectedEvents([...userSelectedEvents, e]);
 
+
+
+    const checkOutHandler = async () => {
+        calculateTotalPrice()
+
+        const { data: { key } } = await axios.get(`${HOST}/api/getkey`)
+
+        const { data: { order } } = await axios.post(`${HOST}/api/payment/checkout`, {
+            amount: totalPrice
+        });
+
+        const options = {
+            key: key, // Enter the Key ID generated from the Dashboard
+            amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            currency: "INR",
+            name: "Cyberia2024",
+            description: "Test Transaction",
+            image: { Logo },
+            order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            callback_url: `${HOST}/api/payment/paymentVerification`,
+            prefill: {
+                name: Data.fullName,
+                email: Data.email,
+                contact: Data.contactNo
+            },
+            notes: {
+                "address": "Razorpay Corporate Office"
+            },
+            theme: {
+                "color": "#3399cc"
+            }
+        };
+
+        var razor = new window.Razorpay(options);
+        razor.open();
+       
+
+        // console.log(data)
     }
     return (
         <div className={`text-8xl w-full sm:bg-contain sm:bg-repeat bg-[#00000097] bg-blend-multiply  h-full bg-[url("./assets/registeration.jpg")] bg-no-repeat bg-cover `}>
@@ -63,15 +126,16 @@ const handleChange = (e) => {
                         <h1 className='text-white text-center text-wrap text-5xl flex flex-col gap-5'>Register for an <span className='text-6xl text-purple-800  '>Events</span></h1>
 
 
-                       <div className='w-[20vw]'> <Select
-                            mode="multiple"
-                            allowClear
-                            className='w-full placeholder:text-gray-900 bg-white outline-none shadow-md shadow-purple-500 rounded-md'
-                            placeholder="Please select"                            
-                            onChange={(e)=>handleChange(e)}
-                            options={options}
+                        <div className='w-[20vw]'>
+                            <Select
+                                mode="multiple"
+                                allowClear
+                                className='w-full placeholder:text-gray-900 bg-white outline-none shadow-md shadow-purple-500 rounded-md'
+                                placeholder="Please select"
+                                onChange={(e) => handleChange(e)}
+                                options={options}
 
-                        /></div>                        
+                            /></div>
                     </div>
                     <div className="flex justify-center items-center md:w-full w-1/2  m-5">
                         <form className='w-4/5 gap-3 p-5  rounded-xl shadow-2xl h-full flex-col flex justify-center items-center' >
@@ -88,6 +152,7 @@ const handleChange = (e) => {
                                 <option value="college" >College</option>
                                 <option value="school">School</option>
                             </select>
+                            <button type='submit' onClick={() => checkOutHandler()} className='text-black text-sm font-semibold shadow-lg shadow-green-600 bg-white px-3 py-1 rounded-md '>Submit</button>
                         </form>
                     </div>
                 </div>

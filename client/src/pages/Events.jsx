@@ -7,28 +7,7 @@ import { eventContext } from '../context/Context'
 const Events = () => {
   
   
-  const { events,setEvents } = useContext(eventContext)
-
-  useEffect(()=>{
-    
-    getEventsData()
-  
-      
-},[])
-
-  const getEventsData = async() =>{
-    try {
-      const response = await axios.get("http://localhost:8000/api/events/getAllEvents");
-      // console.log(response);
-      setEvents(response.data)
-      localStorage.setItem("eventsData",events);
-      console.log(events);
-    } catch (error) {
-      
-    }
-  }
-
-
+  const {events} = useContext(eventContext)
   
   
 

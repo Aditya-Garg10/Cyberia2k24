@@ -12,9 +12,9 @@ const Footer = () => {
                 <p className='text-blue-200 font-mono md:text-[7px] text-xs'>unleash the geek within</p>
               </div>
             </div>
-            <div className="flex  md:hidden flex-col justify-center items-center h-full w-2/3 ">
+            <div className="flex  md:hidden flex-col justify-center text-center items-center h-full w-2/3 ">
                 <div className="flex w-full flex-row  justify-around ">
-                    <h1 className='text-xl  text-blue-300'>Connect Us</h1>
+                    <h1 className='text-xl   text-blue-300'>Connect Us</h1>
                     <h1 className='text-xl  text-blue-300'>Supporters</h1>
                     <h1 className='text-xl  text-blue-300'>Quick Links</h1>
                     
@@ -29,7 +29,7 @@ const Footer = () => {
                     <p className='text-sm text-white '>Microsoft Learn</p>
                     <p className='text-sm text-white '>Register</p>
                 </div>
-                <div className='flex w-full flex-row mt-3  justify-around '>
+                <div className='flex w-full flex-row mt-3   justify-around '>
                     <p className='text-sm text-white '>Youtube</p>
                     <p className='text-sm text-white '></p>
                     <p className='text-sm text-white'>Team</p>

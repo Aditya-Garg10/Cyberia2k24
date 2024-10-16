@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useLayoutEffect } from 'react'
 import './index.css'
 import Img from './assets/Cyb.jpg'
 import  './index.css'
@@ -10,11 +10,34 @@ import About from './pages/About'
 import Team from './pages/Team'
 import Register from './pages/Register'
 import { eventContext } from './context/Context'
+import axios from 'axios'
 
+
+export const HOST = "http://localhost:8000"
 
 const App = () => {
 
+  const { events,setEvents } = useContext(eventContext)
+
   
+ 
+
+  useEffect(()=>{ 
+    const getEventsData = async () =>{
+      try {
+        const response = await axios.get(`${HOST}/api/events/getAllEvents`);
+        // console.log(response);
+        setEvents(response.data)
+        localStorage.setItem("eventsData",events);
+      } catch (error) {
+        console.log(error)
+      }
+    }   
+    getEventsData()        
+    
+},[])
+
+
   
   return (
     <>
