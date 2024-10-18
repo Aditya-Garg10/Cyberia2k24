@@ -21,12 +21,12 @@ const Events = () => {
               
             <div className={`flex flex-col items-center  gap-20 h-full  md:grid-cols-2 sm:grid-cols-1 justify-center my-10  w-full `}>
               <h1 className='text-white text-4xl border-b-2'>Solo Events</h1>
+              <div className='grid grid-cols-3 sm:h-full sm:grid-cols-1 md:grid-cols-2'>
               {
                 events && events.map((event, i) => {
                   if(event.category === "solo"){
-                    return <div className=' sm:h-full sm:grid-cols-1 md:grid-cols-2 h-full grid grid-cols-3 gap-10 w-full'>
-                    <Cards key={i} image={event.image} price={event.price}  modalDescription={event.modalDescription} title={event.title} description={event.description} RuleBook={event.RuleBook} tag={event.tag} />                    
-                    <Cards key={i} image={event.image} modalDescription={event.modalDescription} title={event.title} description={event.description} RuleBook={event.RuleBook} tag={event.tag} />                    
+                    return <div className='  h-full grid grid-cols-3 gap-10 w-full'>
+                    <Cards key={i} image={event.image} price={event.price}  modalDescription={event.modalDescription} title={event.title} description={event.description} RuleBook={event.RuleBook} tag={event.tag} />                                        
                   </div>
                   }
                   else{
@@ -34,13 +34,14 @@ const Events = () => {
                   }                 
                 })
               }
+              </div>
               <h1 className='text-white text-4xl border-b-2'>Team Events</h1>
+              <div className='grid grid-cols-3 gap-10  sm:h-full sm:grid-cols-1 md:grid-cols-2'>
               {
                 events && events.map((event, i) => {
                   if(event.category === "team"){
-                    return <div className='sm:full md:grid-cols-2 sm:grid-cols-1 h-full grid grid-cols-3 gap-10 w-full'>
-                    <TeamCards key={i} image={event.image} price={event.price}  modalDescription={event.modalDescription} title={event.title} description={event.description} RuleBook={event.RuleBook} tag={event.tag} />
-                    
+                    return <div className='sm:full md:grid-cols-2 sm:grid-cols-1 h-full grid lg:grid-cols-3 gap-10 w-full'>
+                    <TeamCards key={i} image={event.image} price={event.price}  modalDescription={event.modalDescription} title={event.title} description={event.description} RuleBook={event.RuleBook} tag={event.tag} />                    
                   </div>
                   }
                   else{
@@ -48,7 +49,7 @@ const Events = () => {
                   }                 
                 })
               }
-
+            </div>
             </div>
           </div>
         </div>
