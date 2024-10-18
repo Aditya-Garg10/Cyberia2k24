@@ -10,10 +10,11 @@ export const eventContext = createContext(null);
 
 const EventsContextProvider = (props) =>{
     const [events, setEvents] = useState([]);
+    const [UserSelectedEvent, setUserSelectedEvent] = useState(JSON.parse(localStorage.getItem('UserSelectedEvent'))||[]);
    
     
    
-    const contextValue = {events,setEvents}
+    const contextValue = {events,setEvents,UserSelectedEvent, setUserSelectedEvent}
     
     return(
         <eventContext.Provider value={contextValue}>

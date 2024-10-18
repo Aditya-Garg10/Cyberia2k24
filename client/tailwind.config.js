@@ -15,7 +15,8 @@ export default {
         "fifth":"#F97316"
       },
      fontFamily:{
-      myFont : ["myFirstFont"]
+      myFont : ["myFirstFont"],
+      spaceAgeFont : ["SpaceAge"]
      }
     },
     screens: {

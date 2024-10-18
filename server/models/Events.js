@@ -22,6 +22,13 @@ const userSchema = new mongoose.Schema({
     tag : {
         type: String,        
     },   
+    category : {
+        type: String,    
+        required : true,    
+    },   
+    price : {
+        type : Number,        
+    }
 },{timestamps: true});
 
 const Event = mongoose.model("Event",userSchema);

@@ -11,9 +11,11 @@ import Team from './pages/Team'
 import Register from './pages/Register'
 import { eventContext } from './context/Context'
 import axios from 'axios'
+import Footer from './components/Footer'
+import EventRegister from './pages/EventRegister'
 
 
-export const HOST = "https://cyberia2k24-2.onrender.com"
+export const HOST = "http://localhost:8000"
 
 const App = () => {
 
@@ -48,9 +50,10 @@ const App = () => {
       <Route path='/event' element={<div className='w-full h-full'><Events/></div>} />
       <Route path='/about' element={<About/>} />
       <Route path='/team' element={<Team/>} />
-      <Route path='/register' element={<Register/>} />
-      
+      <Route path='/register' element={<EventRegister/>} />
+    {/* <Route path='/register' element={<Register/>} /> */}            
     </Routes>
+    <Footer/>
     </BrowserRouter>
     </>
   )

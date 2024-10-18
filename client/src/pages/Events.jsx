@@ -1,32 +1,58 @@
 import React, { useContext, useEffect, useState } from 'react'
 import naac from "../assets/Cyb.jpg"
-import Cards from '../components/Cards'
+import Cards from '../components/cards/Cards'
 import axios from "axios"
 import { eventContext } from '../context/Context'
+import TeamCards from '../components/cards/TeamCards'
+
 
 const Events = () => {
-  
-  
-  const {events} = useContext(eventContext)
-  
-  
+
+
+  const { events } = useContext(eventContext)
+
+
 
   return (
     <div className='h-full  w-full  '>
-    <div className=' w-full h-full sm:bg-contain sm:bg-repeat bg-[#00000097] bg-blend-multiply   bg-[url("./assets/eventsbg.jpg")] bg-repeat bg-cover '>
-    <div className={`text-8xl w-full h-full`}>
-      <div className="flex  justify-start items-start py-28 px-10 w-full  ">
-          <div className={`grid grid-cols-3  place-items-center  md:grid-cols-2 sm:grid-cols-1 justify-center my-10 gap-5 w-full `}>
-            {
-              events && events.map((event,i)=>{
-                return <div className='h-[40vh] sm:h-[20vh] w-200'> <Cards key={i} image={event.image} modalDescription={event.modalDescription} title={event.title} description={event.description} RuleBook={event.RuleBook} tag={event.tag} /> </div>        
-              }) 
-            }
+      <div className='z-1000 bg-[url("./assets/eventsbg.jpg")] h-full bg-blend-multiply bg-[#00000095] bg-fixed bg-no-repeat bg-cover'>
+        <div className={`text-8xl w-full h-full`}>
+          <div className="flex  flex-col justify-center items-center py-32 px-10 w-full  ">
+              
+            <div className={`flex flex-col items-center  gap-20 h-full  md:grid-cols-2 sm:grid-cols-1 justify-center my-10  w-full `}>
+              <h1 className='text-white text-4xl border-b-2'>Solo Events</h1>
+              {
+                events && events.map((event, i) => {
+                  if(event.category === "solo"){
+                    return <div className=' sm:h-full sm:grid-cols-1 md:grid-cols-2 h-full grid grid-cols-3 gap-10 w-full'>
+                    <Cards key={i} image={event.image} price={event.price}  modalDescription={event.modalDescription} title={event.title} description={event.description} RuleBook={event.RuleBook} tag={event.tag} />                    
+                    <Cards key={i} image={event.image} modalDescription={event.modalDescription} title={event.title} description={event.description} RuleBook={event.RuleBook} tag={event.tag} />                    
+                  </div>
+                  }
+                  else{
+                   return ""
+                  }                 
+                })
+              }
+              <h1 className='text-white text-4xl border-b-2'>Team Events</h1>
+              {
+                events && events.map((event, i) => {
+                  if(event.category === "team"){
+                    return <div className='sm:full md:grid-cols-2 sm:grid-cols-1 h-full grid grid-cols-3 gap-10 w-full'>
+                    <TeamCards key={i} image={event.image} price={event.price}  modalDescription={event.modalDescription} title={event.title} description={event.description} RuleBook={event.RuleBook} tag={event.tag} />
+                    
+                  </div>
+                  }
+                  else{
+                   return ""
+                  }                 
+                })
+              }
 
+            </div>
           </div>
+        </div>
       </div>
-    </div>
-    </div>
     </div>
   )
 }

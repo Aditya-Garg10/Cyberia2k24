@@ -36,8 +36,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Sponsored/>
-      <Footer />
+      <Sponsored/>      
     </div>
   )
 }

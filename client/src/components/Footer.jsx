@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div>
         <hr />
-      <div className="flex bg-black items-center justify-between  h-[40vh] md:h-[30vh] w-full">
+      <div className="flex bg-transparent bg-blend-multiply items-center justify-between  h-[40vh] md:h-[30vh] w-full">
             <div className="flex justify-start items-start p-10 h-full w-1/3 md:w-full md:items-center md:justify-center ">
             <div className='justify-end flex flex-col items-end'>
                 <img src={logo2} className='w-[20vw]  sm:w-[55vw] object-contain' alt="" />
