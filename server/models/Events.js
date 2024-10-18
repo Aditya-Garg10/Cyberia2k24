@@ -28,6 +28,10 @@ const userSchema = new mongoose.Schema({
     },   
     price : {
         type : Number,        
+    },
+    field : {
+        type: String,
+        require : true,
     }
 },{timestamps: true});
 

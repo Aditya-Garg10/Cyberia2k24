@@ -14,8 +14,8 @@ const getAllEvents = async (req, res, next) => {
 
 const createEvent = async (req, res, next) => {
     try {
-      const {modalDescription,title,description,RuleBook,tag,price,image,category} = req.body;
-     const response = await Event.create({image,modalDescription,title,description,RuleBook,tag,category,price});     
+      const {modalDescription,title,description,RuleBook,tag,price,image,category,field} = req.body;
+     const response = await Event.create({image,modalDescription,title,description,field,RuleBook,tag,category,price});     
      const success = true
      res.json({success,response}).status(200);
     } catch (error) {
