@@ -27,7 +27,7 @@
   "modalDescription": "The objective is simple yet challenging: participants must inspect the code of a given website, uncover vulnerabilities, and locate hidden 'keys' or flags. These keys are concealed within the code, and finding them requires a sharp eye for detail, logical thinking, and a strong understanding of web security principles.",
   "title": "Capture The Flag",
   "description": "Intermediate",
-  "RuleBook": "",
+  "RuleBook": "",  
   "tag": "1 Member",
   "createdAt": {
     "$date": "2024-10-15T18:46:25.368Z"
@@ -50,6 +50,7 @@
   "description": "Difficulty Level - Intermediate",
   "RuleBook": "",
   "tag": "3-4 Members",
+  "price": 100,
   "createdAt": {
     "$date": "2024-10-18T10:54:20.824Z"
   },
@@ -70,6 +71,7 @@
   "title": "Jumbled Code",
   "description": "Difficulty Level - Intermediate",
   "RuleBook": "",
+  "price": 100,
   "tag": "3-4 Members",
   "createdAt": {
     "$date": "2024-10-18T10:57:52.440Z"
@@ -89,6 +91,7 @@
   "title": "Frame Frenzy",
   "description": "Difficulty Level - Beginner to Expert",
   "RuleBook": "",
+  "price": 100,
   "tag": "solo",
   "createdAt": {
     "$date": "2024-10-18T11:04:42.495Z"
@@ -108,7 +111,7 @@
   "title": "Online Scavenger Hunt",
   "description": "Difficulty level - intermediate",
   "RuleBook": "",
-  "tag": "2-3 Members ",
+  "tag": "2-3 Members ",  
   "createdAt": {
     "$date": "2024-10-18T11:10:35.152Z"
   },
@@ -128,6 +131,7 @@
   "title": "Technical debate",
   "description": " ",
   "RuleBook": "",
+  "price": 100,
   "tag": "Solo Event ",
   "createdAt": {
     "$date": "2024-10-18T11:22:28.027Z"
