@@ -32,7 +32,8 @@ const Navbar = () => {
     <div>
       <div className="flex justify-between px-10 absolute backdrop-blur-sm flex-row  bg-[#00000054] w-full h-[12vh]">
         <div className="flex  gap-0 w-full justify-start items-center">
-          <Link to="/"><img src={img1} className='object-contain   md:mx-0  mx-5 h-[52px] ' alt="" />                   </Link>
+          <Link to="/"><h1 className='text-4xl font-light font-spaceAgeFont text-white  sm:text-3xl'>CYBERIA</h1>
+          <p className='text-wrap sm:w-2/3  text-gray-300  text-end text-[10px] sm:text-xs font-light'>Unleash the Geek Within</p></Link>
         </div>
         <div className='flex md:hidden gap-10 items-center justify-center flex-row  '>
           <div className="flex  flex-row w-full  gap-6 justify-evenly font-mono  items-center">

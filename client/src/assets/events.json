@@ -1,0 +1,413 @@
+[{
+  "_id": {
+    "$oid": "670eb790b13a65159310b68c"
+  },
+  "image": "https://png.pngtree.com/template/20220419/ourmid/pngtree-hackathon-background-screen-hack-synth-poster-image_1174636.jpg",
+  "modalDescription": "The 48-Hour Hackathon is an intense, fast-paced coding competition where teams of developers, designers, and innovators come together to build innovative solutions from scratch in just two days. Participants will have 48 hours to brainstorm, design, develop, and present a working prototype that addresses a specific problem or theme announced at the start of the event. This hackathon challenges creativity, collaboration, and technical skills under tight deadlines, pushing teams to think outside the box and create impactful, real-world solutions. At the end of the event, teams will pitch their projects to a panel of judges, with prizes awarded based on innovation, functionality, design, and potential impact. It’s a thrilling race against the clock where ideas become reality",
+  "title": "Hackathon",
+  "description": "Difficulty Level - Beginner to Expert",
+  "RuleBook": "",
+  "tag": "1-4 Members",
+  "createdAt": {
+    "$date": "2024-10-15T18:42:24.300Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-15T18:42:24.300Z"
+  },
+  "__v": 0,
+  "price": {
+    "$numberLong": "100"
+  },
+  "category": "team",
+  "field": "technical"
+},
+{
+  "_id": {
+    "$oid": "670eb881b13a65159310b691"
+  },
+  "image": "https://jhalon.github.io/images/google-ctf-banner.jpg",
+  "modalDescription": "The objective is simple yet challenging: participants must inspect the code of a given website, uncover vulnerabilities, and locate hidden 'keys' or flags. These keys are concealed within the code, and finding them requires a sharp eye for detail, logical thinking, and a strong understanding of web security principles.",
+  "title": "Capture The Flag",
+  "description": "Intermediate",
+  "RuleBook": "",
+  "tag": "1 Member",
+  "createdAt": {
+    "$date": "2024-10-15T18:46:25.368Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-15T18:46:25.368Z"
+  },
+  "__v": 0,
+  "price": {
+    "$numberLong": "200"
+  },
+  "category": "solo",
+  "field": "technical"
+},
+{
+  "_id": {
+    "$oid": "67123e5c2b42c742d2a69546"
+  },
+  "image": "https://media.gettyimages.com/id/949118312/vector/bedbug-icon-on-money-and-cryptocurrency-background.jpg?s=612x612&w=gi&k=20&c=r_ImmXv8ftV2Jbzj9hJ_KXxQIQ8uQPcLczBxd4TB8wc=",
+  "modalDescription": "Bug Hunt is a technical event where participants are tasked with finding and fixing errors (bugs) in a given set of code. These errors can be syntax mistakes, logical flaws, or incorrect implementations that prevents the code from functioning as intended.",
+  "title": "Bug Hunt",
+  "description": "Difficulty Level - Intermediate",
+  "RuleBook": "",
+  "tag": "3-4 Members",
+  "createdAt": {
+    "$date": "2024-10-18T10:54:20.824Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T10:54:20.824Z"
+  },
+  "__v": 0,
+  "category": "team",
+  "field": "technical"
+},
+{
+  "_id": {
+    "$oid": "67123f302b42c742d2a69548"
+  },
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM5CtpBtZskQr0r_llsKutUefihlr-YbA5yw&s",
+  "modalDescription": "In these events, participants are given scrambled  code, which they must reorganize or complete correctly to achieve the desired output. It tests problem-solving, debugging, and coding skills, requiring participants to identify the logical flow and correct syntax.",
+  "title": "Jumbled Code",
+  "description": "Difficulty Level - Intermediate",
+  "RuleBook": "",
+  "tag": "3-4 Members",
+  "createdAt": {
+    "$date": "2024-10-18T10:57:52.440Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T10:57:52.440Z"
+  },
+  "__v": 0,
+  "category": "team"
+},
+{
+  "_id": {
+    "$oid": "671240ca21b599dc69e19477"
+  },
+  "image": "https://t3.ftcdn.net/jpg/05/48/87/08/360_F_548870803_womfmsxtthXmhwlQhdbooje6LNVa10by.jpg",
+  "modalDescription": "In Frame Frenzy, you’ll start by designing your own object or character and then animate it. You’ll create the design, and watch your creation come to life through movement. It's the perfect blend of creativity, where every ,movement brings a new motion to your masterpiece. ",
+  "title": "Frame Frenzy",
+  "description": "Difficulty Level - Beginner to Expert",
+  "RuleBook": "",
+  "tag": "solo",
+  "createdAt": {
+    "$date": "2024-10-18T11:04:42.495Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T11:04:42.495Z"
+  },
+  "__v": 0,
+  "category": "solo"
+},
+{
+  "_id": {
+    "$oid": "6712422b21b599dc69e19479"
+  },
+  "image": "https://www.treasure-hunt-ideas.co.uk/wp-content/uploads/2022/09/bg.jpg",
+  "modalDescription": "The Online Scavenger Hunt is an event where participants solve internet-based challenges to find hidden clues across websites, images, or other online resources. Teams work together to complete a series of puzzles and riddles, with each solved clue unlocking the next one. The hunt requires quick thinking, internet research skills, and teamwork, with points awarded for speed and accuracy.",
+  "title": "Online Scavenger Hunt",
+  "description": "Difficulty level - intermediate",
+  "RuleBook": "",
+  "tag": "2-3 Members ",
+  "createdAt": {
+    "$date": "2024-10-18T11:10:35.152Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T11:10:35.152Z"
+  },
+  "__v": 0,
+  "category": "team",
+  "price": "400"
+},
+{
+  "_id": {
+    "$oid": "671244f421b599dc69e1947b"
+  },
+  "image": "https://i.pinimg.com/736x/6d/e9/1c/6de91c11a6c674a79cf315fe1929c135.jpg",
+  "modalDescription": "Ready to flex your brainpower? Participants will go head-to-head in a fast-paced, high-energy debate on the hottest tech topics. From AI to cybersecurity, it’s time to prove who’s got the sharpest mind and the best arguments. Engage, debate, and dominate the discussion—it’s not just about what you know, but how you defend it!",
+  "title": "Technical debate",
+  "description": " ",
+  "RuleBook": "",
+  "tag": "Solo Event ",
+  "createdAt": {
+    "$date": "2024-10-18T11:22:28.027Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T11:22:28.027Z"
+  },
+  "__v": 0,
+  "category": "solo"
+},
+{
+  "_id": {
+    "$oid": "671246279115e29b5b2976d1"
+  },
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU9kzT1Ljr8or29TheARoGaLJcJN5vxBeIYw&s",
+  "modalDescription": "Here, creativity meets competition as you build and program your very own robot. Once your creation is ready, it’s time to hit the track! Navigate challenges, outsmart opponents, and race for the finish line. Who will take home the title of Robo Race Champion? Get ready for an adrenaline-fueled day of engineering and excitement!",
+  "title": "Robo Race",
+  "description": "Difficulty level - intermediate",
+  "RuleBook": "",
+  "tag": "4-5 Members",
+  "category": "team",
+  "price": 100,
+  "createdAt": {
+    "$date": "2024-10-18T11:27:35.210Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T11:27:35.210Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "671249309115e29b5b2976d5"
+  },
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTS-bom5WsuafWGH-1YPjkrjwFtHJYSOSLpA&s",
+  "modalDescription": "This event showcases the latest in Internet of Things technology, featuring interactive displays, hands-on demonstrations, and exciting presentations. Explore smart devices  and more as you discover how these technologies are transforming our everyday lives. ",
+  "title": "IoT Exhibition",
+  "description": "Difficulty level - Beginner to Expert",
+  "RuleBook": "",
+  "tag": "4-5 Members",
+  "category": "team",
+  "price": 100,
+  "createdAt": {
+    "$date": "2024-10-18T11:40:32.620Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T11:40:32.620Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "671249ea9115e29b5b2976d7"
+  },
+  "image": "https://cdn2.steamgriddb.com/grid/e3602b473aa609e0d309b0b39fd697b7.png",
+  "modalDescription": "Defend the Crown is a competition where teams must first create secure encryption algorithms to protect data, and then attempt to decrypt each other's encrypted data in a two-phase challenge. In the first phase, teams will encrypt information, aiming to make it difficult for others to crack. In the second phase, they will exchange encryptions and race against time to decrypt their opponents' codes. The team that successfully defends their encryption while breaking the most codes wins, showcasing their mastery in both encryption and decryption.",
+  "title": "Defend the Crown",
+  "description": "Difficulty level - Beginner to Expert",
+  "RuleBook": "",
+  "tag": "3-4 Members",
+  "category": "team",
+  "price": 100,
+  "createdAt": {
+    "$date": "2024-10-18T11:43:38.901Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T11:43:38.901Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67125047fd3b39e7e41ad267"
+  },
+  "image": "https://www.speakeragency.co.uk/media/42hf3xy3/future-of-public-speaking-690x460.jpg",
+  "modalDescription": "an exciting event that tests your quick thinking and public speaking skills! Participants will receive a surprise topic and have just 3 minutes to prepare a one-minute speech. It’s all about spontaneity and creativity as you gather your thoughts and deliver an engaging talk on the spot.",
+  "title": "Off the cuff , Spur of the moment",
+  "description": "Difficulty level - Beginner to Expert",
+  "RuleBook": "",
+  "tag": "solo",
+  "category": "solo",
+  "price": 100,
+  "field": "Non-Technical Event",
+  "createdAt": {
+    "$date": "2024-10-18T12:10:47.656Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T12:10:47.656Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67125053fd3b39e7e41ad269"
+  },
+  "image": "https://themarketinghustle.com/wp-content/uploads/2024/02/a-detailed-low-poly-art-image-showcasing-the-essential-roles-within-a-marketing-team-including-a-strategist-with-a-compass-and-map-a-creative-768x439.webp",
+  "modalDescription": "Get ready for a thrilling challenge in our Marketing Game! In this event, marketing agencies will receive a specific company to promote and showcase their creativity. Each team will have the opportunity to develop a marketing strategy and create campaigns. Agencies will be given set time in which they need to get the best stats on the post. The agency that impresses the most with their innovative approach and effective marketing will be crowned the winner! Join us for a fun and competitive day where you can unleash your marketing talent and see who can create the best buzz!",
+  "title": "Marketing Game",
+  "description": "Difficulty level - Beginner to Expert",
+  "RuleBook": "",
+  "tag": "10 Members",
+  "category": "team",
+  "price": 100,
+  "field": "Non-Technical Event",
+  "createdAt": {
+    "$date": "2024-10-18T12:10:59.410Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T12:10:59.410Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "671250d1fd3b39e7e41ad26c"
+  },
+  "image": "https://hbr.org/resources/images/article_assets/2021/09/A_Sep21_16_1326956550.jpg",
+  "modalDescription": "an exciting event where participants get to present their innovative startup ideas! Each participant will have the opportunity to pitch their concept to a panel of judges. You’ll have a set time to explain your idea, its potential impact, and how it stands out from the crowd. This is a fantastic chance to share your creativity, get valuable feedback, and network with fellow innovators",
+  "title": "Pitch The Idea ",
+  "description": "Difficulty level - Beginner to Expert",
+  "RuleBook": "",
+  "tag": "5 Members",
+  "category": "team",
+  "price": 100,
+  "field": "Non-Technical Event",
+  "createdAt": {
+    "$date": "2024-10-18T12:13:05.400Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T12:13:05.400Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67125108fd3b39e7e41ad26f"
+  },
+  "image": "https://p.kindpng.com/picc/s/500-5007117_thumb-image-treasure-hunt-game-png-transparent-png.png",
+  "modalDescription": "Join us for an exhilarating Treasure Hunt! In this game, participants will form teams and receive clues that lead them to hidden treasures scattered throughout a designated area. As you solve riddles and complete fun challenges, you'll uncover more clues, testing your problem-solving skills and teamwork. The first team to find all the treasures wins! Get ready for a day of adventure, excitement, and friendly competition—can you uncover the treasure?",
+  "title": "Treasure Hunt ",
+  "description": "Difficulty level - Beginner to Expert",
+  "RuleBook": "",
+  "tag": "5 Members",
+  "category": "team",
+  "price": 100,
+  "field": "Non-Technical Event",
+  "createdAt": {
+    "$date": "2024-10-18T12:14:00.413Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T12:14:00.413Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6712531efd3b39e7e41ad272"
+  },
+  "image": "https://www.animationxpress.com/wp-content/uploads/2023/08/Free-Fire.webp",
+  "modalDescription": "Join us for an electrifying eSports showdown at Tech Fest! Dive into the action with Free Fire, where top players will compete for glory and prizes. Whether you're a fan or a gamer, don’t miss this chance to witness intense battles and showcase your skills. Be there for the excitement!",
+  "title": "Free Fire",
+  "description": "Difficulty level - Beginner to Expert",
+  "RuleBook": "",
+  "tag": "4 Members",
+  "category": "team",
+  "price": 400,
+  "field": "Non-Technical Event",
+  "createdAt": {
+    "$date": "2024-10-18T12:22:54.627Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T12:22:54.627Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "671253ccfd3b39e7e41ad274"
+  },
+  "image": "https://i.pinimg.com/originals/cc/06/be/cc06be2faed2da4880072a987716cd5a.jpg",
+  "modalDescription": "Gear up for an action-packed BGMI tournament at Tech Fest! Watch as skilled players go head-to-head in intense battles for survival and exciting prizes. Whether you're a fan or a competitor, don’t miss the chance to witness top-tier gameplay and join the BGMI community!",
+  "title": "BGMI",
+  "description": "Difficulty level - Beginner to Expert",
+  "RuleBook": "",
+  "tag": "solo",
+  "category": "solo",
+  "price": 100,
+  "field": "Non-Technical Event",
+  "createdAt": {
+    "$date": "2024-10-18T12:25:48.699Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T12:25:48.699Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67125451fd3b39e7e41ad278"
+  },
+  "image": "https://profilerr.net/static/content/thumbs/440x/3/c2/nowqmj-3299df49bf1f0b6f404aee30b6ccec23.png",
+  "modalDescription": "Join us for a thrilling CS2 showdown at Tech Fest! Experience fast-paced action as elite teams clash in this iconic shooter. Whether you're there to watch or ready to compete, be part of the excitement and cheer for your favorite team as they vie for victory and prizes!",
+  "title": "CS2",
+  "description": "Difficulty level - Beginner to Expert",
+  "RuleBook": "",
+  "tag": "4 Members",
+  "category": "team",
+  "price": 400,
+  "field": "Non-Technical Event",
+  "createdAt": {
+    "$date": "2024-10-18T12:28:01.134Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T12:28:01.134Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67125519fd3b39e7e41ad27e"
+  },
+  "image": "https://i.pinimg.com/originals/cc/06/be/cc06be2faed2da4880072a987716cd5a.jpg",
+  "modalDescription": "Gear up for an action-packed BGMI tournament at Tech Fest! Watch as skilled players go head-to-head in intense battles for survival and exciting prizes. Whether you're a fan or a competitor, don’t miss the chance to witness top-tier gameplay and join the BGMI community!",
+  "title": "bgmi",
+  "description": "Difficulty level - Beginner to Expert",
+  "RuleBook": "",
+  "tag": "4 Members",
+  "category": "team",
+  "price": 400,
+  "field": "Non-Technical Event",
+  "createdAt": {
+    "$date": "2024-10-18T12:31:21.387Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T12:31:21.387Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67125547fd3b39e7e41ad281"
+  },
+  "image": "https://images.livemint.com/img/2020/06/03/1600x900/Valorant_1591218052835_1591218061187.jpg",
+  "modalDescription": "Get ready for the Valorant Championship at Tech Fest! Watch as top agents take on each other in strategic, team-based gameplay. Whether you’re a spectator or a player, immerse yourself in the high-stakes action and celebrate the best of Valorant as teams battle for glory and rewards!",
+  "title": "Valorant",
+  "description": "Difficulty level - Beginner to Expert",
+  "RuleBook": "",
+  "tag": "4 Members",
+  "category": "team",
+  "price": 400,
+  "field": "Non-Technical Event",
+  "createdAt": {
+    "$date": "2024-10-18T12:32:07.675Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T12:32:07.675Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67125566fd3b39e7e41ad283"
+  },
+  "image": "https://www.animationxpress.com/wp-content/uploads/2023/08/Free-Fire.webp",
+  "modalDescription": "Join us for an electrifying eSports showdown at Tech Fest! Dive into the action with Free Fire, where top players will compete for glory and prizes. Whether you're a fan or a gamer, don’t miss this chance to witness intense battles and showcase your skills. Be there for the excitement!",
+  "title": "free fire",
+  "description": "Difficulty level - Beginner to Expert",
+  "RuleBook": "",
+  "tag": "solo",
+  "category": "solo",
+  "price": 100,
+  "field": "Non-Technical Event",
+  "createdAt": {
+    "$date": "2024-10-18T12:32:38.971Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T12:32:38.971Z"
+  },
+  "__v": 0
+}]

@@ -11,7 +11,7 @@ import Logo from '../assets/Logo.png'
 
 const EventRegister = () => {
     const navigate = useNavigate()
-    const { UserSelectedEvent, setUserSelectedEvent } = useContext(eventContext);
+    const { UserSelectedEvent } = useContext(eventContext);
 
 
     const onFinish = (values) => {

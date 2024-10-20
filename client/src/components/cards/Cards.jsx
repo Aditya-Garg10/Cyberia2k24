@@ -52,7 +52,7 @@ const Cards = (props) => {
     return (
         <div className=''>
             {<Card
-                className={`text-white md:w-full md:h-full w-[30vw] h-[35vh] backdrop-blur-3xl  md:w-300 bg-cover  border-0 rounded-md bg-[#000000a1] bg-no-repeat bg-blend-multiply  flex-wrap flex flex-col`}
+                className={`text-white  w-[30vw] md:w-auto bg-contain md:h-full h-[35vh] backdrop-blur-3xl  md:w-300  md:bg-contain  border-0 rounded-md bg-[#000000a1] bg-no-repeat bg-blend-multiply  flex-wrap flex flex-col`}
                 style={{
                     backgroundImage: `url(${props.image ? props.image : "./assets/Cyb.jpg"})`
                 }}

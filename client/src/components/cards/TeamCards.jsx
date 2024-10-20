@@ -18,7 +18,7 @@ const TeamCards = (props) => {
  
 const navigate = useNavigate()
     
-    const {UserSelectedEvent,setUserSelectedEvent} = useContext(eventContext)
+    const {setUserSelectedEvent} = useContext(eventContext)
 
     const [Data, setData] = useState({
         fullName : "",
