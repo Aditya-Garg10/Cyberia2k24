@@ -13,6 +13,7 @@ import { eventContext } from './context/Context'
 import axios from 'axios'
 import Footer from './components/Footer'
 import EventRegister from './pages/EventRegister'
+import PaymentSuccess from './pages/PaymentSuccess'
 
 
 export const HOST = "http://localhost:8000"
@@ -51,6 +52,7 @@ const App = () => {
       <Route path='/about' element={<About/>} />
       <Route path='/team' element={<Team/>} />
       <Route path='/register' element={<EventRegister/>} />
+      <Route path='/paymentSuccess' element={<PaymentSuccess/>} />
     {/* <Route path='/register' element={<Register/>} /> */}            
     </Routes>
     <Footer/>

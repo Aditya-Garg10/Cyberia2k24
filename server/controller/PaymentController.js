@@ -44,14 +44,14 @@ const paymentVerification = async(req,res) =>{
         const isAuthentic = expectedSignature === razorpay_signature;
 
         if(isAuthentic){
-          // DatabSe
+          res.status(204).json({success: true})
         }
         else{
           res.status(400).json({
             success : false
           })
         }
-  res.status(200).json({success: true})
+  
   } catch (error) {
     console.log(error)
   }

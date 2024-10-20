@@ -1,13 +1,14 @@
-import { Router } from "express";
-import  {SignUp,Login,logOut}  from '../controllers/AuthController.js'
-import { verifyToken } from "../middleware/AuthMiddleware.js";
+const  {registerTeamUser} = require("../controller/User");
+
+const Router = require("express") 
+
+
 
 
 const router = Router();
 
-router.post("/signup", SignUp)
-router.post("/login", Login)
-router.post("/logout",logOut)
+router.post("/registerTeamUser", registerTeamUser)
 
 
-export default router;
+
+module.exports = router
