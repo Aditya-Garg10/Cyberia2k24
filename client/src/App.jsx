@@ -15,7 +15,7 @@ import Footer from './components/Footer'
 import EventRegister from './pages/EventRegister'
 
 
-export const HOST = "http://localhost:8000"
+export const HOST = "https://cyberia2k24-2.onrender.com"
 
 const App = () => {
 
