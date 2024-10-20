@@ -16,8 +16,8 @@ const Home = () => {
           <div className=' flex gap-5  flex-col h-[80vh] w-full'>
             <div className='flex  items-center gap-3 h-[30vh] w-full'>
               <div className='flex gap-3'>
-                <img src={logo} className='h-[20vh] pr-4 border-r-[1px] object-contain' alt="" />
-                <img src={naac} className='h-[20vh] pr-4 x object-contain' alt="" />                
+                <img src={logo} className='h-[20vh] sm:h-[15vh] pr-4 border-r-[1px] object-contain' alt="" />
+                <img src={naac} className='h-[20vh] sm:h-[15vh] pr-4 x object-contain' alt="" />                
               </div>                           
             </div>
             <div className="flex gap-5 flex-col">
