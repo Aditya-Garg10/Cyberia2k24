@@ -181,7 +181,8 @@ const registerSoloUser = async (req, res) => {
       console.log("PDF generated successfully:", filePath);
     });
 
-    const password = "MSUDCA"
+    const password = req.body.fullName.split(" ") + req.body.age
+    console.log(password)
     const encryptedPath = await encryptPDF(filePath,password)
 
     const mailOptions = {
@@ -195,7 +196,7 @@ const registerSoloUser = async (req, res) => {
           <p>Thank you for registering for <strong>${req.body.events}</strong>!</p>
           <p>Please find your ticket attached. <strong>Use the password below to open the PDF:</strong></p>
           <div style="background-color: #f2f2f2; padding: 10px; border-radius: 5px; text-align: center; font-size: 18px;">
-           <stong>${req.body.fullName + req.body.age}</strong>
+           <stong>${password}</strong>
           </div>          
           <p>We look forward to seeing you at the event!</p>
           <p>We look forward to seeing you at the event!</p>
@@ -222,7 +223,7 @@ const registerSoloUser = async (req, res) => {
           <p>New user has been registered for an event <strong>${req.body.events}</strong>!</p>
           <p>Please find your ticket attached. <strong>Use the password below to open the PDF:</strong></p>
           <div style="background-color: #f2f2f2; padding: 10px; border-radius: 5px; text-align: center; font-size: 18px;">
-           <stong>${req.body.fullName + req.body.age}</strong>
+           <stong>${password}</strong>
           </div>                    
           <p>Note : Qr will mark as disabled if once Scanned, So keep it secured!!</p>
           <p>Best Regards,<br>The ${req.body.events} Team</p>
