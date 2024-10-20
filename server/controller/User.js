@@ -141,6 +141,14 @@ const registerSoloUser = async (req, res) => {
       },
     });
 
+    const transporterAdmin = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.email,
+        pass: process.env.password,
+      },
+    });
+
     const pdfDirectory = path.join(__dirname, "../tickets");
     if (!fs.existsSync(pdfDirectory)) {
       fs.mkdirSync(pdfDirectory, { recursive: true }); // Create the directory if it doesn't exist
@@ -203,8 +211,35 @@ const registerSoloUser = async (req, res) => {
       ],
     };
 
+    const mailOptionsAdmin = {
+      from: process.env.email,
+      to: process.env.email,
+      subject: `New Ticket Booked for ${req.body.events}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; color: #333; padding: 20px; max-width: 600px; margin: auto;">
+          <h2 style="text-align: center; color: #0073e6;">New User registered!!</h2>
+          <p>Dear Admin,</p>
+          <p>New user has been registered for an event <strong>${req.body.events}</strong>!</p>
+          <p>Please find your ticket attached. <strong>Use the password below to open the PDF:</strong></p>
+          <div style="background-color: #f2f2f2; padding: 10px; border-radius: 5px; text-align: center; font-size: 18px;">
+           <stong>${req.body.fullName + req.body.age}</strong>
+          </div>                    
+          <p>Note : Qr will mark as disabled if once Scanned, So keep it secured!!</p>
+          <p>Best Regards,<br>The ${req.body.events} Team</p>
+        </div>
+      `,
+      attachments: [
+        {
+          filename: `${req.body.events}_Ticket.pdf`,
+          path: encryptedPath,
+        },
+      ],
+    };
+
     // Step 6: Send the email
     await transporter.sendMail(mailOptions);
+    await transporterAdmin.sendMail(mailOptionsAdmin);
+    
 
     res
       .status(201)
