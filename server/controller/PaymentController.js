@@ -53,6 +53,10 @@ const paymentVerification = async(req,res) =>{
         }
   
   } catch (error) {
+    res.status(400).json({
+      success : false,
+      message : error.description
+    })
     console.log(error)
   }
 }

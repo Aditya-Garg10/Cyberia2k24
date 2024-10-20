@@ -3,6 +3,9 @@ import { Button, Card, ConfigProvider, Input, Skeleton, Spin } from 'antd';
 import { Modal } from 'antd';
 import {FaUser,FaMailchimp, FaMobile, FaMobileScreen} from 'react-icons/fa6'
 import {Link} from 'react-router-dom'
+import axios from 'axios';
+import { HOST } from '../../App';
+import Logo from '../../assets/Logo.png'
 
 
 const Cards = (props) => {
@@ -17,6 +20,7 @@ const Cards = (props) => {
 
     const [modalOpen, setModalOpen] = useState(false);
     const [modalTitle, setmodalTitle] = useState("");
+    const [eventPrice, seteventPrice] = useState("");
     const [modalDes, setmodalDes] = useState("");
     
 
@@ -29,7 +33,7 @@ const Cards = (props) => {
         year : "",
         level : "",  
         age : "",
-        gender : ""         
+        gender : "",                
     });
 
     const changeHandler = (e) => {
@@ -41,12 +45,73 @@ const Cards = (props) => {
         setModalOpen(true)
         setmodalTitle(e.title)
         setmodalDes(e.modalDescription)
+        seteventPrice(e.price)
     }
 
     const handleSubmit = async() =>{
         console.log({...Data,modalTitle});
-        setModalOpen(false)
         
+        
+    
+        try {
+            const { data: { key } } = await axios.get(`${HOST}/api/getkey`)
+
+        const { data: { order } } = await axios.post(`${HOST}/api/payment/checkout`, {
+            amount: eventPrice
+        });
+
+        const options = {
+            key: key, // Enter the Key ID generated from the Dashboard
+            amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            currency: "INR",
+            name: "Cyberia2024",
+            description: "Test Transaction",            
+            order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1           
+            prefill: {
+                name: Data.fullName,
+                email: Data.email,
+                contact: Data.contactNo
+            },            
+            notes: {
+                "address": "Razorpay Corporate Office"
+            },
+            handler : 
+            async function (response) {                    
+                  try {
+                    const res =  await axios.post(`${HOST}/api/payment/paymentVerification`,{
+                        ...response
+                    });
+                    console.log(res)
+                    if(res.status === 204){
+                        const res =  await axios.post(`${HOST}/api/user/registerSoloUser`,{
+                            ...Data,events : modalTitle 
+                        })
+                        console.log(res)
+                        if(res.status === 201 ){
+                            alert("Ticket Sent Successfully")
+                            setModalOpen(false)
+                        }
+                        
+                    }
+                    else{
+                        alert("failed")
+                    }                
+                  } catch (error) {
+                    console.log(error)
+                  } 
+                }
+            ,
+            theme: {
+                "color": "#000"
+            }
+        };
+
+        var razor = new window.Razorpay(options);
+        razor.open();
+       
+        } catch (error) {
+            alert(error.message)
+        }        
 
     }
     return (
@@ -90,8 +155,8 @@ const Cards = (props) => {
                     </Button>,
                 ]}                
             >
-                <div className="flex flex-row md:flex-col justify-center items-center w-full h-full ">
-                    <div className="flex md:w-full h-full w-1/2  justify-center items-center text-center p-10 ">
+                <div className="flex 2xl:flex-row lg:flex-row md:flex-col sm:flex-col justify-center items-center w-full h-full ">
+                    <div className="flex md:w-full h-full w-1/2 sm:w-full  justify-center items-center text-center p-10 ">
                         <p className='w-full h-full flex text-sm justify-center items-center'>{modalDes ? modalDes : <Skeleton className='w-full h-full'  size="large"  hover  />}</p>
                     </div>
                     
