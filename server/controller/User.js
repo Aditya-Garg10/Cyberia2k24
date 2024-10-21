@@ -183,7 +183,7 @@ const registerSoloUser = async (req, res) => {
 
     const password = req.body.fullName.split(" ") + req.body.age
     console.log(password)
-    const encryptedPath = await encryptPDF(filePath,password)
+    // const encryptedPath = await encryptPDF(filePath,password)
 
     const mailOptions = {
       from: process.env.email,
