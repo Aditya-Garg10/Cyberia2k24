@@ -15,14 +15,12 @@ import Footer from './components/Footer'
 import EventRegister from './pages/EventRegister'
 
 
-export const HOST = "https://cyberia2k24-2.onrender.com"
+export const HOST = "https://cyberia2k24-w9pk.onrender.com"
 
 const App = () => {
 
   const { events,setEvents } = useContext(eventContext)
 
-  
- 
 
   useEffect(()=>{ 
     const getEventsData = async () =>{
