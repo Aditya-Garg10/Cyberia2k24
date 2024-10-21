@@ -11,21 +11,21 @@ const PDFDocument = require("pdfkit");
 const { exec } = require("child_process");
 dotenv.config();
 
-const encryptPDF = (filePath, password) => {
-  return new Promise((resolve, reject) => {
-    const encryptedPath = filePath.replace('.pdf', '_encrypted.pdf');
-    const command = `qpdf --encrypt ${password} ${password} 256 -- ${filePath} ${encryptedPath}`;
+// const encryptPDF = (filePath, password) => {
+//   return new Promise((resolve, reject) => {
+//     const encryptedPath = filePath.replace('.pdf', '_encrypted.pdf');
+//     const command = `qpdf --encrypt ${password} ${password} 256 -- ${filePath} ${encryptedPath}`;
 
-    exec(command, (error, stdout, stderr) => {
-      if (error) {
-        console.error('Error encrypting PDF:', stderr);
-        return reject(error);
-      }
-      console.log('PDF encrypted successfully:', encryptedPath);
-      resolve(encryptedPath);
-    });
-  });
-};
+//     exec(command, (error, stdout, stderr) => {
+//       if (error) {
+//         console.error('Error encrypting PDF:', stderr);
+//         return reject(error);
+//       }
+//       console.log('PDF encrypted successfully:', encryptedPath);
+//       resolve(encryptedPath);
+//     });
+//   });
+// };
 
 const registerTeamUser = async (req, res) => {
   try {
@@ -81,7 +81,7 @@ const registerTeamUser = async (req, res) => {
     });
 
     const password = "MSUDCA"
-    const encryptedPath = await encryptPDF(filePath,password)
+    // const encryptedPath = await encryptPDF(filePath,password)
 
     const mailOptions = {
       from: process.env.email,
@@ -207,7 +207,7 @@ const registerSoloUser = async (req, res) => {
       attachments: [
         {
           filename: `${req.body.events}_Ticket.pdf`,
-          path: encryptedPath,
+          path: filePath,
         },
       ],
     };
