@@ -22,12 +22,11 @@ const Home = () => {
           <p className='text-wrap sm:w-2/3  text-gray-300  text-end text-[17px] sm:text-xs font-light'>Unleash the Geek Within</p></Link>                          
             </div>
             <div className="flex gap-5 flex-col">
-              <h4 className='text-purple-300  drop-shadow-lg shadow-white md:text-5xl text-7xl'>Innovation Without</h4>
+              <h4 className='text-purple-300  drop-shadow-lg shadow-white md:text-5xl text-7xl'>Innovating Without</h4>
               <h4 className='presented-text text-white md:text-5xl   text-7xl'>LIMITS</h4>
             </div>
             <div className="flex gap-5 flex-col">
-              <p className='text-lg md:text-sm text-blue-200'>24th to 26th December 2024</p>
-              
+              <p className='text-lg md:text-sm text-blue-200'>22th to 24th December 2024</p>              
             </div>
           </div>
         </div>
