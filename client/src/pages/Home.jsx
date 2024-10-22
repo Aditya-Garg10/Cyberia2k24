@@ -6,23 +6,24 @@ import logo2 from '../assets/logo2.png'
 import "../index.css"
 import Sponsored from './Sponsored'
 import Footer from '../components/Footer'
+import { Link } from 'react-router-dom'
+import Navbar from '../components/Navbar'
 
 
 const Home = () => {
   return (
     <div>
-      <div className={`"z-1000 bg-[url('./assets/Cyb.jpg')] bg-fixed bg-no-repeat h-full bg-cover`}>
+      <div className={`" bg-[url('./assets/metaverseBg.jpg')] bg-blend-multiply bg-[#0000008c] bg-fixed bg-no-repeat h-full bg-cover`}>
         <div className="flex  justify-start items-start py-28 px-10 w-full h-full ]">
+        
           <div className=' flex gap-5  flex-col h-[80vh] w-full'>
             <div className='flex  items-center gap-3 h-[30vh] w-full'>
-              <div className='flex gap-3'>
-                <img src={logo} className='h-[20vh] sm:h-[15vh] pr-4 border-r-[1px] object-contain' alt="" />
-                <img src={naac} className='h-[20vh] sm:h-[15vh] pr-4 x object-contain' alt="" />                
-              </div>                           
+            <Link to="/"><h1 className='text-6xl font-light font-spaceAgeFont text-white  sm:text-3xl'>CYBERIA</h1>
+          <p className='text-wrap sm:w-2/3  text-gray-300  text-end text-[17px] sm:text-xs font-light'>Unleash the Geek Within</p></Link>                          
             </div>
             <div className="flex gap-5 flex-col">
-              <h4 className='text-yellow-500 md:text-5xl text-7xl'>Innovation Without</h4>
-              <h4 className='presented-text md:text-5xl  text-7xl'>LIMITS</h4>
+              <h4 className='text-purple-300  drop-shadow-lg shadow-white md:text-5xl text-7xl'>Innovation Without</h4>
+              <h4 className='presented-text text-white md:text-5xl   text-7xl'>LIMITS</h4>
             </div>
             <div className="flex gap-5 flex-col">
               <p className='text-lg md:text-sm text-blue-200'>24th to 26th December 2024</p>
