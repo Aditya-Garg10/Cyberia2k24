@@ -11,6 +11,8 @@ const PDFDocument = require("pdfkit");
 const { exec } = require("child_process");
 dotenv.config();
 
+
+
 // const encryptPDF = (filePath, password) => {
 //   return new Promise((resolve, reject) => {
 //     const encryptedPath = filePath.replace('.pdf', '_encrypted.pdf');
@@ -120,6 +122,8 @@ const registerTeamUser = async (req, res) => {
   }
 };
 
+
+
 const registerSoloUser = async (req, res) => {
   try {
     // Step 1: Generate a unique identifier
@@ -128,10 +132,10 @@ const registerSoloUser = async (req, res) => {
     // Step 2: Generate the QR code as a PNG data URL
     const qrCodeData = await QRcode.toDataURL(uniqueID);
 
-    const SoloData = await SoloUser.create({
-      ...req.body,
-      qrString: uniqueID,
-    });
+    const PocketBase = (await import('pocketbase')).default;
+    const FormData = (await import('form-data')).default;
+    const pb = new PocketBase('http://127.0.0.1:8090');
+    
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -239,11 +243,27 @@ const registerSoloUser = async (req, res) => {
 
     // Step 6: Send the email
     await transporter.sendMail(mailOptions);
-    await transporterAdmin.sendMail(mailOptionsAdmin);
-    
+    await transporterAdmin.sendMail(mailOptionsAdmin);        
+    // const formData = new FormData();
+    //     formData.append('title', 'Sample PDF');
+    //     formData.append('description', 'Test description');
+    //     formData.append('file', filePath);
+        // const headers = formData.getHeaders()
+    // // await pb.admins.authWithPassword('adityagarg646@gmail.com', 'DeepAditya@10');    
+    // // // console.log("Data",formData)            
+    // // const filePath2 = fs.ReadStream(filePath)
+    // const record = await pb.collection('pdfFile').create({file:filePath2})
+    // console.log(record)
+      const SoloData = await SoloUser.create({
+        ...req.body,
+        qrString: uniqueID,    
+        filePath        
+      });
+
+      
 
     res
-      .status(201)
+      .status(203)
       .json({ message: "QR Code generated and sent successfully!", PDF : filePath });
   } catch (error) {
     console.error("Error generating QR code:", error);

@@ -23,7 +23,7 @@ app.use(
     cors({
       origin: [
        
-        "http://localhost:5173",
+        "http://msudcacyberia.in",
         "http://localhost:3000",
         "https://cyberia2k24.vercel.app",        
         "http://127.0.0.1:3000"
@@ -43,7 +43,8 @@ app.use(
     "https://cyberia2k24.vercel.app",
     "http://localhost:5173",
     "http://localhost:3000",
-    "http://127.0.0.1:3000"
+    "http://127.0.0.1:3000",
+    "http://msudcacyberia.in"
     
   ];
   
