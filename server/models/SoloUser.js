@@ -4,10 +4,7 @@ const SoloUserSchema = new mongoose.Schema(
   {
     fullName: {
       type: String,
-    },
-    ug_pg: {
-      type: String,
-    },
+    },  
     stream: {
       type: String,
     },

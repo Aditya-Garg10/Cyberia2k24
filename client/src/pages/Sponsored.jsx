@@ -5,6 +5,7 @@ import naac from "../assets/naac.png"
 import microsoft from '../assets/microsoft.png'
 import Befriends from '../assets/befriends.jpeg'
 
+
 const Sponsored = () => {
   return (
     <div className="z-1000 bg-[url('./assets/metaverseBg.jpg')] bg-blend-multiply bg-[#0000008c]  bg-fixed bg-no-repeat bg-cover flex flex-col gap-10">
@@ -26,6 +27,7 @@ const Sponsored = () => {
       </div>
       <div className="flex backdrop-blur-sm h-auto flex-col items-center shadow-2xl shadow-black bg-[#0000003c] mx-20 rounded-xl py-24 my-10 gap-10 justify-center p-10  ">
         <div className="flex">
+        
           <h1 className='text-2xl pb-2 md:text-sm border-b-2 text-white'>The Maharaja Sayajirao University of Baroda</h1>
         </div>
         <div className="flex  sm:flex-col  w-full md:flex-col h-full  justify-center items-center">

@@ -34,10 +34,11 @@ const Navbar = () => {
   ];
   return (
     <div>
-      <div className="flex  justify-between px-10 absolute backdrop-blur-sm flex-row  bg-[#00000054] w-full h-[15vh]">
+      <div className="flex mb-20 justify-between px-10 absolute backdrop-blur-sm flex-row  bg-[#00000054] w-full h-[15vh]">
         <div className="flex  gap-0 w-1/3 justify-start items-center">
         <div className='flex gap-3'>
-                <Link to="/"><img src={logo} className='h-[14vh] sm:h-[15vh] pr-4  object-contain' alt="" />                              </Link>
+                <Link to="/">
+                  <img src={logo} className='h-[14vh] sm:h-[15vh] pr-4  object-contain' alt="" />                              </Link>
               </div>           
         </div>
         <div className='flex md:hidden w-1/3 gap-10 items-center justify-center flex-row  '>

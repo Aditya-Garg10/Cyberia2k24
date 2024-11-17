@@ -1,12 +1,17 @@
 import HariBhai from "../assets/HariBhai.png";
 import V_K_Srivastava from "../assets/V_K_Shrivastava.png";
 import P_K_Mehta from "../assets/P_K_Mehta.jpeg"
+import { ThreeDCardDemo } from "../components2/ui/test";
+import { LayoutGridDemo } from "../components2/ui/Card2Main";
+import { TextGenerateEffectDemo } from "../components2/ui/Text";
+
+
 
 function About() {
   return (
-    <div className="z-1000 bg-[url('./assets/AboutPage_Bg_Blurred.jpg')] bg-fixed bg-no-repeat bg-cover">
-    <section className="text-white py-[5rem] flex flex-col items-center justify-center text-justify px-6 md:px-10 lg:px-20">
-      <header className="mb-[5rem] mt-[2.5rem] bg-[#ffffff20]  backdrop-blur-lg border border-white border-opacity-30 shadow-lg rounded-xl p-6 w-full">
+    <div className="z-1000 light bg-black bg-[url('./assets/AboutPage_Bg_Blurred.jpg')] bg-fixed bg-no-repeat bg-cover">
+    <section className="text-white   md:py-[10rem] lg:py-[8rem] py-[5rem] flex flex-col items-center justify-center text-justify px-6 md:px-10 lg:px-20">
+      <header className="mb-[5rem]  mt-[5rem] bg-[#ffffff20]  backdrop-blur-lg border border-white border-opacity-30 shadow-lg rounded-xl p-6 w-full">
         <div className="logo-font-face text-4xl md:text-5xl lg:text-6xl text-center">CYBERIA</div>
       </header>
       <div className="bg-[#ffffff20]  backdrop-blur-lg border border-white border-opacity-30 shadow-lg rounded-xl p-6 w-full">
@@ -61,7 +66,10 @@ function About() {
               />
             </div>
           </div>
+          
+          <ThreeDCardDemo/>
           <div className="bg-[#ffffff20] bg-opacity-20 backdrop-blur-lg border border-white border-opacity-30 shadow-lg rounded-xl p-6 mt-10 leading-8">
+          
             <h2 className="font-bold text-lg">Cyberia Organizing Committee</h2>
             <div className="grid gap-2">
               <a>Prof. Vijay Kumar Srivastava</a>
@@ -70,11 +78,16 @@ function About() {
                 src={V_K_Srivastava}
                 className="w-[300px] h-[300px] shadow-sm rounded-xl mt-4"
               />
+      <TextGenerateEffectDemo />
             </div>
           </div>
         </footer>
       </section>
+      <div className="">
+      <LayoutGridDemo/>
+      </div>
     </div>
+
   );
 }
 

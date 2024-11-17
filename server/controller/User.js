@@ -232,7 +232,7 @@ const registerSoloUser = async (req, res) => {
       attachments: [
         {
           filename: `${req.body.events}_Ticket.pdf`,
-          path: encryptedPath,
+          path: filePath,
         },
       ],
     };
@@ -244,7 +244,7 @@ const registerSoloUser = async (req, res) => {
 
     res
       .status(201)
-      .json({ message: "QR Code generated and sent successfully!" });
+      .json({ message: "QR Code generated and sent successfully!", PDF : filePath });
   } catch (error) {
     console.error("Error generating QR code:", error);
     res.status(500).json({ message: "Internal server error" });
