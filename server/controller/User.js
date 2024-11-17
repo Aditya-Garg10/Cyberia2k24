@@ -10,24 +10,21 @@ const fs = require("fs");
 const PDFDocument = require("pdfkit");
 const { exec } = require("child_process");
 dotenv.config();
+const admin = require("firebase-admin")
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY)
 
 
 
-// const encryptPDF = (filePath, password) => {
-//   return new Promise((resolve, reject) => {
-//     const encryptedPath = filePath.replace('.pdf', '_encrypted.pdf');
-//     const command = `qpdf --encrypt ${password} ${password} 256 -- ${filePath} ${encryptedPath}`;
+if(!admin.apps.length){
+  admin.initializeApp({
+    credential:
+    admin.credential.cert(serviceAccount)
+    ,
+    storageBucket : 'gs://e-commerce-backend-bfa60.appspot.com',
+  })
+}
 
-//     exec(command, (error, stdout, stderr) => {
-//       if (error) {
-//         console.error('Error encrypting PDF:', stderr);
-//         return reject(error);
-//       }
-//       console.log('PDF encrypted successfully:', encryptedPath);
-//       resolve(encryptedPath);
-//     });
-//   });
-// };
+const bucket = admin.storage().bucket()
 
 const registerTeamUser = async (req, res) => {
   try {
@@ -82,9 +79,11 @@ const registerTeamUser = async (req, res) => {
       console.log("PDF generated successfully:", filePath);
     });
 
-    const password = "MSUDCA"
+
+    // const password = "MSUDCA"
     // const encryptedPath = await encryptPDF(filePath,password)
 
+    
     const mailOptions = {
       from: process.env.email,
       to: req.body.email,
@@ -185,10 +184,21 @@ const registerSoloUser = async (req, res) => {
       console.log("PDF generated successfully:", filePath);
     });
 
-    const password = req.body.fullName.split(" ") + req.body.age
-    console.log(password)
+
+    // const password = req.body.fullName.split(" ") + req.body.age
+    // console.log(password)
     // const encryptedPath = await encryptPDF(filePath,password)
 
+    const file = bucket.file(`${uniqueID}.pdf`);
+    await bucket.upload(filePath,{
+      destination: `pdfs/${uniqueID}.pdf`,
+      metadata:{
+        contentType : "application/pdf"
+      }
+    })
+
+    await file.makePublic()
+    const publicUrl = `https://storage.googleapis.com/${bucket.name}/pdfs/${uniqueID}.pdf`
     const mailOptions = {
       from: process.env.email,
       to: req.body.email,
@@ -264,7 +274,7 @@ const registerSoloUser = async (req, res) => {
 
     res
       .status(203)
-      .json({ message: "QR Code generated and sent successfully!", PDF : filePath });
+      .json({ message: "QR Code generated and sent successfully!", PDF : publicUrl });
   } catch (error) {
     console.error("Error generating QR code:", error);
     res.status(500).json({ message: "Internal server error" });
@@ -272,3 +282,20 @@ const registerSoloUser = async (req, res) => {
 };
 
 module.exports = { registerTeamUser , registerSoloUser };
+
+
+// const encryptPDF = (filePath, password) => {
+//   return new Promise((resolve, reject) => {
+//     const encryptedPath = filePath.replace('.pdf', '_encrypted.pdf');
+//     const command = `qpdf --encrypt ${password} ${password} 256 -- ${filePath} ${encryptedPath}`;
+
+//     exec(command, (error, stdout, stderr) => {
+//       if (error) {
+//         console.error('Error encrypting PDF:', stderr);
+//         return reject(error);
+//       }
+//       console.log('PDF encrypted successfully:', encryptedPath);
+//       resolve(encryptedPath);
+//     });
+//   });
+// };
